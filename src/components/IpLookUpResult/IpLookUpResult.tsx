@@ -1,7 +1,7 @@
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useIpGeoLookUpQuery } from "../../hooks/useIpGeoLookUpQuery";
 import { useApplicationContext } from "../../providers/ContextProvider";
 import { Card } from "../Card/Card";
+import { LoadingIndicator } from "../LoadingIndicator/LoadingIndicator";
 import "./IpLookUpResult.css";
 
 type IpLookUpResultProps = {
@@ -26,7 +26,7 @@ export function IpLookUpResult({ className }: IpLookUpResultProps) {
   if (isLoading) {
     return (
       <Card className="h-[192px] flex items-center justify-center">
-        <AiOutlineLoading3Quarters size="80px" style={{ transform: "rotate(90deg)" }} />
+        <LoadingIndicator size="80px" />
       </Card>
     );
   }
