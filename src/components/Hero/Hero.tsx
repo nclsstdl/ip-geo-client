@@ -6,8 +6,8 @@ export function Hero() {
         <span className="text-flixcheck-green">IP-Adresse</span>
       </h1>
       <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua.
+        Gib im folgenden eine gültige IPv4 Adresse ein, um im Handumdrehen das Land, die Region und die Stadt für diese
+        herauszufinden.
       </p>
     </div>
   );
