@@ -1,4 +1,4 @@
-import { IpLookUp } from "./components/IpLookUp/IpLookUp";
+import { IpLookUpForm } from "./components/IpLookUpForm/IpLookUpForm";
 import { IpLookUpResult } from "./components/IpLookUpResult/IpLookUpResult";
 import { ApplicationStateProvider } from "./providers/ContextProvider";
 
@@ -9,7 +9,7 @@ function App() {
         Ip Geo Lookup
       </header>
       <main className="flex flex-col items-center">
-        <IpLookUp />
+        <IpLookUpForm />
         <IpLookUpResult className="mt-4" />
       </main>
 

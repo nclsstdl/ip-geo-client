@@ -15,7 +15,7 @@ const schema = z.object({
 
 type SchemaProps = z.infer<typeof schema>;
 
-export function IpLookUp() {
+export function IpLookUpForm() {
   const { dispatch } = useApplicationContext();
 
   const {
