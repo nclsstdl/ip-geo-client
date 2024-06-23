@@ -1,0 +1,4 @@
+tr td:first-child {
+  width: 100px;
+  font-weight: 800;
+}

@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <div className="w-[70%]">
-      <h1 className="mb-4 text-center text-3xl font-extrabold">
+      <h1 className="mb-4 text-center text-3xl font-extrabold tracking-tighter">
         Finde <span className="text-flixcheck-green">Geo-Informationen</span> zu einer beliebigen{" "}
         <span className="text-flixcheck-green">IP-Adresse</span>
       </h1>
