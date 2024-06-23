@@ -5,15 +5,13 @@ import { ApplicationStateProvider } from "./providers/ContextProvider";
 function App() {
   return (
     <ApplicationStateProvider>
-      <header className="bg-green-500 shadow-md grid place-items-center font-bold text-3xl text-green-50 tracking-tighter">
+      <header className="sticky top-0 flex items-center p-2 shadow-md font-bold text-lg tracking-tighter">
         Ip Geo Lookup
       </header>
-      <main className="flex flex-col items-center">
+      <main className="flex flex-col items-center justify-center">
         <IpLookUpForm />
         <IpLookUpResult className="mt-4" />
       </main>
-
-      <footer className="bg-green-100"></footer>
     </ApplicationStateProvider>
   );
 }
