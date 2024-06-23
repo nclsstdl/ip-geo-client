@@ -1,3 +1,4 @@
+import { useIpGeoLookUpQuery } from "../../hooks/useIpGeoLookUpQuery";
 import { useApplicationContext } from "../../providers/ContextProvider";
 import { Card } from "../Card/Card";
 
@@ -10,9 +11,31 @@ export function IpLookUpResult({ className }: IpLookUpResultProps) {
     state: { selectedIp },
   } = useApplicationContext();
 
+  const { data, isLoading, error } = useIpGeoLookUpQuery(selectedIp);
+
+  if (isLoading) {
+    return (
+      <Card className={className}>
+        <p>Loading...</p>
+      </Card>
+    );
+  }
+
+  if (error) {
+    return (
+      <Card className={className}>
+        <p>{error.message}</p>
+      </Card>
+    );
+  }
+
+  if (!data) {
+    return null;
+  }
+
   return (
     <Card className={className}>
-      <p>Loading...</p>
+      <p>{data.country}</p>
     </Card>
   );
 }

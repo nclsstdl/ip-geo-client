@@ -1,12 +1,13 @@
 import { ReactElement } from "react";
 import { MdError } from "react-icons/md";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { clsx } from "clsx";
 
-type IconButtonProps = { type: "button" | "submit"; icon: ReactElement; disabled?: boolean; onClick?: () => void };
+type IconButtonProps = { type: "button" | "submit"; icon: ReactElement; isLoading?: boolean; onClick?: () => void };
 
-export function IconButton({ type, icon, disabled, onClick }: IconButtonProps) {
+export function IconButton({ type, icon, isLoading, onClick }: IconButtonProps) {
   const handleClick = () => {
-    if (disabled) {
+    if (isLoading) {
       return;
     }
 
@@ -17,13 +18,13 @@ export function IconButton({ type, icon, disabled, onClick }: IconButtonProps) {
     <button
       className={clsx(
         "w-[32px] h-[32px] flex justify-center items-center rounded-2xl  transition-all ease-in",
-        disabled ? "opacity-30" : "hover:bg-gray-100"
+        isLoading ? "opacity-30" : "hover:bg-gray-100"
       )}
       type={type}
-      disabled={disabled}
+      disabled={isLoading}
       onClick={handleClick}
     >
-      {icon ? icon : <MdError />}
+      {isLoading ? <AiOutlineLoading3Quarters style={{ transform: "rotate(90deg)" }} /> : icon ? icon : <MdError />}
     </button>
   );
 }

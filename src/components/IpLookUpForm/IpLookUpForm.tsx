@@ -6,6 +6,7 @@ import { useApplicationContext } from "../../providers/ContextProvider";
 import { Card } from "../Card/Card";
 import { IconButton } from "../IconButton/IconButton";
 import { TextInput } from "../TextInput/TextInput";
+import { useIpGeoLookUpQuery } from "../../hooks/useIpGeoLookUpQuery";
 
 const schema = z.object({
   ip: z.string().min(1, "Bitte eine Ip-Adresse eingeben").ip("Bitte eine gültige Ip-Adresse eingeben"),
@@ -14,7 +15,12 @@ const schema = z.object({
 type SchemaProps = z.infer<typeof schema>;
 
 export function IpLookUpForm() {
-  const { dispatch } = useApplicationContext();
+  const {
+    dispatch,
+    state: { selectedIp },
+  } = useApplicationContext();
+
+  const { isLoading } = useIpGeoLookUpQuery(selectedIp);
 
   const {
     register,
@@ -35,7 +41,7 @@ export function IpLookUpForm() {
             {/* <input type="text" placeholder="Ip-Adresse" {...register("ip")} /> */}
             {errors?.ip && <small className="text-red-700">{errors.ip.message}</small>}
           </div>
-          <IconButton type="submit" icon={<FaSearch />} />
+          <IconButton type="submit" icon={<FaSearch />} isLoading={isLoading} />
         </div>
       </form>
     </Card>
