@@ -38,8 +38,8 @@ export function IpLookUpResult({ className }: IpLookUpResultProps) {
   return (
     <Card className={className} header="Geo-Informationen gefunden!">
       <p className="mb-3 text-sm">
-        Folgende Informationen konnten für die Ip-Adresse <span className="font-semibold">{data.ip}</span> gefunden
-        werden.
+        Folgende Informationen konnten für die Ip-Adresse{" "}
+        <span className="text-flixcheck-green font-semibold tracking-tighter">{data.ip}</span> gefunden werden.
       </p>
       <table className="text-sm">
         <tbody>
