@@ -8,7 +8,7 @@ import { IconButton } from "../IconButton/IconButton";
 import { TextInput } from "../TextInput/TextInput";
 
 const schema = z.object({
-  ip: z.string().min(1, "foo bar baz"),
+  ip: z.string().min(1, "Bitte eine Ip-Adresse eingeben").ip("Bitte eine gültige Ip-Adresse eingeben"),
 });
 
 type SchemaProps = z.infer<typeof schema>;
