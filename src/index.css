@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+main {
+  height: 100vh;
+}
+
 body {
   @apply bg-light-green text-dark-green;
-  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
@@ -12,12 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  height: 3rem;
-}
-
 main {
-  height: calc(100vh - 8rem);
   padding: 1rem;
 }
 

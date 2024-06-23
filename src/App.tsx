@@ -10,9 +10,6 @@ function App() {
   return (
     <ApplicationStateProvider>
       <QueryClientProvider client={queryClient}>
-        <header className="sticky top-0 flex items-center shadow-sm p-2 font-bold text-lg tracking-tighter">
-          Ip Geo Lookup
-        </header>
         <main className="flex flex-col items-center justify-center gap-8">
           <Hero />
           <IpLookUpForm />
