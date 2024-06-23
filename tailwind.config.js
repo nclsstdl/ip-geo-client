@@ -4,10 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "green-800": "#142d23",
-        "green-500": "#64e1af",
-        "green-100": "#c1f3df",
-        "green-50": "#effcf7",
+        "dark-green": "#142d23",
+        "flixcheck-green": "#64e1af",
+        "light-green": "#effcf7",
       },
     },
   },
