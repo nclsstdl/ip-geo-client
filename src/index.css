@@ -4,8 +4,9 @@
 
 html,
 body,
+#root,
 main {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
