@@ -7,32 +7,12 @@ type IpLookUpResultProps = {
 
 export function IpLookUpResult({ className }: IpLookUpResultProps) {
   const {
-    state: { isLoading, geoInformation, error },
+    state: { selectedIp },
   } = useApplicationContext();
 
-  if (isLoading) {
-    return (
-      <Card className={className}>
-        <p>Loading...</p>
-      </Card>
-    );
-  }
-
-  if (error) {
-    return (
-      <Card className={className}>
-        <p>{error}</p>
-      </Card>
-    );
-  }
-
-  if (!geoInformation) {
-    return <></>;
-  }
-
   return (
-    <Card className={className} header={geoInformation.ip}>
-      <p>{geoInformation.country}</p>
+    <Card className={className}>
+      <p>Loading...</p>
     </Card>
   );
 }

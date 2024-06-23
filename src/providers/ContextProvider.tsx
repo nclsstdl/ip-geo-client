@@ -5,7 +5,7 @@ export const ApplicationContext = createContext<{
   state: ApplicationState;
   dispatch: Dispatch<Action>;
 }>({
-  state: { geoInformation: undefined, isLoading: false, error: undefined },
+  state: { selectedIp: undefined },
   dispatch: () => false,
 });
 
