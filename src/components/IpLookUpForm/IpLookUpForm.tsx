@@ -38,7 +38,6 @@ export function IpLookUpForm() {
         <div className="flex flex-row gap-4">
           <div className="flex-1 flex flex-col">
             <TextInput label="Ip-Adresse" name="ip" register={register} />
-            {/* <input type="text" placeholder="Ip-Adresse" {...register("ip")} /> */}
             {errors?.ip && <small className="text-red-700">{errors.ip.message}</small>}
           </div>
           <IconButton type="submit" icon={<FaSearch />} isLoading={isLoading} />
