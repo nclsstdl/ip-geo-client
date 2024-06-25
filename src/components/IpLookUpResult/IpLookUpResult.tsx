@@ -18,7 +18,7 @@ export function IpLookUpResult({ className }: IpLookUpResultProps) {
   if (error) {
     return (
       <Card className={className}>
-        <p className="text-red-700">{error.message}</p>
+        <p className="text-xs text-red-700">{error.response?.data || error.message}</p>
       </Card>
     );
   }
